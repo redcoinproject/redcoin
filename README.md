@@ -18,7 +18,7 @@ Redcoin - a decendent of Litecoin that combines the great features from Luckycoi
 
 	- The prize will be halved every 3 years.
 
-	- The default ports are 11361(Connect) and 11362 (RPC).
+	- The default ports are 11631(Connect) and 11632 (RPC).
 
 The official website is: www.RedCoin.pw
 
