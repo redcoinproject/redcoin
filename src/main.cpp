@@ -897,6 +897,9 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
 	return nSubsidy + nFees;
 }
 
+double GetNextBlockValue() {
+	return (double)GetBlockValue( nBestHeight + 1, 0, hashBestChain ) / (double)COIN;
+}
 
 
 static const int64 nTargetTimespan = 20 * 60;						// Redcoin: every 20 minutes
@@ -2049,7 +2052,7 @@ bool LoadBlockIndex(bool fAllowNew)
             return false;
 
         // Genesis block
-        const char* pszTimestamp = "June 29, 2013: German Rider Wins Tour de France’s Chaotic First Stage.";
+        const char* pszTimestamp = "June 29, 2013: German Rider Wins Tour de Franceï¿½s Chaotic First Stage.";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
