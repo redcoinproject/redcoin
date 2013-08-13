@@ -897,6 +897,10 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
 	return nSubsidy + nFees;
 }
 
+double GetNextBlockValue()
+{
+	return (double)GetBlockValue( nBestHeight +1, 0, hashBestChain ) / (double)COIN;
+}
 
 
 static const int64 nTargetTimespan = 20 * 60;						// Redcoin: every 20 minutes
